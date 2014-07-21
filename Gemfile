@@ -47,6 +47,9 @@ gem 'pg'
 # Using devise to manage Auth
 gem 'devise'
 
-#User OmniAuth
+# User OmniAuth
 gem 'omniauth'
 gem 'omniauth-facebook'
+
+# Using active resource for external API
+gem 'activeresource', require: 'active_resource'

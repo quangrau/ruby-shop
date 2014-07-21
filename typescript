@@ -1,0 +1,49 @@
+Script started on Mon Jul 21 12:05:16 2014
+[?1034hbash-3.2$ clearbin/pg_dump -t authentications[C[C[C[C[C[C[C[C[C[Cclear[K[K[K[K[K[Kbin/pg_dump -t authentications[C[C[C[C[C[C[C[C[C[C[Kscript/console
+bash: script/console: No such file or directory
+bash-3.2$ script/console[K[K[K[K[K[K[K[K[Kt Product.find():)a)l)l)
+bash: syntax error near unexpected token `('
+bash-3.2$ script Product.find(:all)[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kconsole
+Script started, output file is console
+[?1034hbash-3.2$ Product.find():)a)l)l)
+bash: syntax error near unexpected token `:all'
+bash-3.2$ rails destroy model category
+Warning: Running `gem pristine --all` to regenerate your installed gemspecs (and deleting then reinstalling your bundle if you use bundle --path) will improve the startup performance of Spring.
+[1m[37m      invoke[0m  active_record
+[1m[31m      remove[0m    db/migrate/20140721043633_create_categories.rb
+[1m[31m      remove[0m    app/models/category.rb
+[1m[37m      invoke[0m    test_unit
+[1m[31m      remove[0m      test/models/category_test.rb
+[1m[31m      remove[0m      test/fixtures/categories.yml
+bash-3.2$ rails destroy model category[K[K[K[K[K[K[K[Kproduct
+Warning: Running `gem pristine --all` to regenerate your installed gemspecs (and deleting then reinstalling your bundle if you use bundle --path) will improve the startup performance of Spring.
+[1m[37m      invoke[0m  active_record
+[1m[31m      remove[0m    db/migrate/20140721043642_create_products.rb
+[1m[31m      remove[0m    app/models/product.rb
+[1m[37m      invoke[0m    test_unit
+[1m[31m      remove[0m      test/models/product_test.rb
+[1m[31m      remove[0m      test/fixtures/products.yml
+bash-3.2$ 
+bash-3.2$ rails destroy model product[K[K[K[K[K[K[Kmodel
+Warning: Running `gem pristine --all` to regenerate your installed gemspecs (and deleting then reinstalling your bundle if you use bundle --path) will improve the startup performance of Spring.
+[1m[37m      invoke[0m  active_record
+[1m[31m      remove[0m    db/migrate/20140721065318_create_models.rb
+[1m[31m      remove[0m    app/models/model.rb
+[1m[37m      invoke[0m    test_unit
+[1m[31m      remove[0m      test/models/model_test.rb
+[1m[31m      remove[0m      test/fixtures/models.yml
+bash-3.2$ clear
+[H[2Jbash-3.2$ clear[K[K[K[K[Kirb
+irb(main):001:0> pro[K[K[Kp = p[K[K[Kca[K  = ca[K[KCategory.find():)a)l)l)
+NameError: uninitialized constant Category
+	from (irb):1
+	from /usr/bin/irb:12:in `<main>'
+irb(main):002:0> clear
+NameError: undefined local variable or method `clear' for main:Object
+	from (irb):2
+	from /usr/bin/irb:12:in `<main>'
+irb(main):003:0> exit
+bash-3.2$ clear
+[H[2Jbash-3.2$ 1 +2 2
+bash: 1: command not found
+bash-3.2$ 

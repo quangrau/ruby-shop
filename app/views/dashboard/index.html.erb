@@ -1,2 +1,89 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<h1>Dashboards <small>dashboard & statistic</small></h1>
+
+<!-- Begin Breadcrumb -->
+<ol class="breadcrumb">
+	<li><a href="/">Home</a></li>
+	<li class="active">Dashboard</li>
+</ol>
+
+<!-- Begin dashboard stat -->
+<div class="row">
+	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<div class="dashboard-stat blue-madison">
+			<div class="visual">
+				<i class="glyphicon glyphicon-tasks"></i>
+			</div>
+			<div class="details">
+				<div class="number">
+					<%= @categories.length %>
+				</div>
+				<div class="desc">
+				Total Categories
+				</div>
+			</div>
+			<a class="more" href="categories">
+				View more <i class="glyphicon glyphicon-chevron-right"></i>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<div class="dashboard-stat red-intense">
+			<div class="visual">
+				<i class="glyphicon glyphicon-shopping-cart"></i>
+			</div>
+			<div class="details">
+				<div class="number">
+					<%= @products.length %>
+				</div>
+				<div class="desc">
+					Total Products
+				</div>
+			</div>
+			<a class="more" href="products">
+				View more <i class="glyphicon glyphicon-chevron-right"></i>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<div class="dashboard-stat green-haze">
+			<div class="visual">
+				<i class="glyphicon glyphicon-stats"></i>
+			</div>
+			<div class="details">
+				<div class="number">
+					<% 
+						profit = 0
+						@products.each do |product|
+							profit += product.price
+						end
+					%>
+					<%= profit %>
+				</div>
+				<div class="desc">
+					Total Profit
+				</div>
+			</div>
+			<a class="more" href="javascript:;">
+				&nbsp;
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+		<div class="dashboard-stat purple-plum">
+			<div class="visual">
+				<i class="glyphicon glyphicon-user"></i>
+			</div>
+			<div class="details">
+				<div class="number">
+					+89%
+				</div>
+				<div class="desc">
+					Total Users
+				</div>
+			</div>
+			<a class="more" href="javascript:;">
+				&nbsp;
+			</a>
+		</div>
+	</div>
+</div>

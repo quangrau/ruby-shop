@@ -1,0 +1,37 @@
+<h1>Categories <small>category list</small></h1>
+
+<!-- Begin Breadcrumb -->
+<ol class="breadcrumb">
+	<li><a href="/">Home</a></li>
+	<li><a href="dashboard">Dashboard</a></li>
+	<li class="active">Categories</li>
+</ol>
+
+<div class="table-responsive">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr class="heading">
+				<th>#</th>
+				<th>Category Name</th>
+				<th>Total Products</th>
+				<th>Created Date</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @categories.each do |category| %>
+			<tr>
+				<td><%= category.id %></td>
+				<td><%= category.name %></td>
+				<td>0</td>
+				<td><%= category.created_at %></td>
+				<td>
+				<%= link_to 'Edit', edit_category_path(category) %>
+				|
+				<%= link_to 'Destroy', category_path(category),
+					method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
