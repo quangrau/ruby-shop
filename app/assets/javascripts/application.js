@@ -15,3 +15,22 @@
 //= require turbolinks
 //= require_tree .
 //= require twitter/bootstrap
+
+function ready(){
+
+	$(document).on("ajax:beforeSend", "form", function(evt, xhr, settings){
+		var self = $(this);
+
+		self.find('input[type=submit]').val( "Submitting..." );
+		self.find('#loading-icon').removeClass('hide');
+	});
+
+	$(document).on("ajax:beforeSend", "a[data-remote]", function(evt, xhr, settings){
+		var self = $(this);
+
+		self.prev().removeClass('hide');
+	});
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

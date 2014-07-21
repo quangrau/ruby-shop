@@ -1,0 +1,15 @@
+<% @categories.each do |category| %>
+<tr>
+	<td><%= category.id %></td>
+	<td><%= category.name %></td>
+	<td><%= category.created_at %></td>
+	<td class="action">
+		<%= link_to edit_category_path(category), remote: true, class: "label label-default" do %>
+			<i class='glyphicon glyphicon-pencil'></i>&nbsp;&nbsp;Edit
+		<% end %>&nbsp;&nbsp;
+		<%= link_to category_delete_path(category), remote: true, class: "label label-danger" do %>
+			<i class='glyphicon glyphicon-trash'></i>&nbsp;&nbsp;Destroy
+		<% end %>
+	</td>
+</tr>
+<% end %>

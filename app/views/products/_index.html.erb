@@ -1,0 +1,17 @@
+<% @products.each do |product| %>
+<tr>
+	<td><%= product.id %></td>
+	<td><%= product.name %></td>
+	<td><%= product.category.name %></td>
+	<td><%= product.price %></td>
+	<td><%= product.created_at %></td>
+	<td class="action">
+		<%= link_to edit_product_path(product), remote: true, class: "label label-default" do %>
+			<i class='glyphicon glyphicon-pencil'></i>&nbsp;&nbsp;Edit
+		<% end %>&nbsp;&nbsp;
+		<%= link_to product_delete_path(product), remote: true, class: "label label-danger" do %>
+			<i class='glyphicon glyphicon-trash'></i>&nbsp;&nbsp;Destroy
+		<% end %>
+	</td>
+</tr>
+<% end %>

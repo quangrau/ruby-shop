@@ -1,18 +1,14 @@
 Rails.application.routes.draw do
 
-	get 'categories/index'
-
-	get 'products/index'
-
-	get 'product/index'
-
-	get 'dashboard/index'
-
 	match '/users/sign_in' => 'home#index', :via => [:get]
 
 	devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
-	resources :users, :dashboard, :categories, :products
+	resources :dashboard, only: [:index]
+	resources :users
+	resources :categories, :products do
+		get "delete"
+	end
 
 	root :to => 'home#index'
 

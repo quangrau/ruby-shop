@@ -1,4 +1,4 @@
-<h1>Products <small>product list</small></h1>
+<h1 class="page-title">Products <small>product list</small></h1>
 
 <!-- Begin Breadcrumb -->
 <ol class="breadcrumb">
@@ -7,33 +7,31 @@
 	<li class="active">Products</li>
 </ol>
 
+<div class="row">
+	<div class="col-md-12 action-row">
+		<%= link_to "New Product", new_product_path, remote: true, class: "btn btn-primary pull-right" %>
+	</div>
+</div>
+
+<div class="box-form"></div>
+
 <div class="table-responsive">
-	<table class="table table-bordered table-striped">
+	<table class="table table-hover table-bordered table-striped">
 		<thead>
 			<tr class="heading">
 				<th>#</th>
 				<th>Product Name</th>
-				<th>Category ID</th>
+				<th>Category Name</th>
 				<th>Price</th>
 				<th>Created Date</th>
 				<th>Actions</th>
 			</tr>
 		</thead>
-		<tbody>
-			<% @products.each do |product| %>
-			<tr>
-				<td><%= product.id %></td>
-				<td><%= product.name %></td>
-				<td><%= product.category_id %></td>
-				<td><%= product.price %></td>
-				<td><%= product.created_at %></td>
-				<td>
-				<%= link_to 'Edit', edit_product_path(product) %>
-				|
-				<%= link_to 'Destroy', product_path(product),
-					method: :delete, data: { confirm: 'Are you sure?' } %></td>
-			</tr>
-			<% end %>
+		<tbody id="product-index">
+			<%= render "index" %>
 		</tbody>
 	</table>
 </div>
+<div class="modal bs-example-modal-sm fade" id="product-modal">
+  
+</div><!-- /.modal -->

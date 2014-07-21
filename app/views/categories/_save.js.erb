@@ -1,0 +1,12 @@
+$("ul.errors").html("")
+<% if @category.errors.any? %>
+  <% @category.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $("#category-index").fadeOut(200, function() {
+  	$(this).empty().html("<%= escape_javascript(render 'index') %>").fadeIn(200)
+  })
+  $(".box-form").hide()
+  $("#category-modal").modal("hide")
+<% end %>

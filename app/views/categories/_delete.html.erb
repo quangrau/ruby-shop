@@ -1,0 +1,17 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h4 class="modal-title">Delete Category</h4>
+		</div>
+		<div class="modal-body">
+			<ul class="errors"></ul>
+			Are you sure you wish to delete <b><%= @category.name %></b>?
+		</div>
+		<div class="modal-footer">
+			<%= image_tag "ajax-loader.gif", :alt => 'Waiting', class: 'hide', id: 'loading-icon' %>
+			<%= link_to "Yes, Delete This Category", category_path(@category), method: :delete, remote: true, class: "btn btn-danger" %>
+			<%= link_to "No, Please Don't", "#", class: "btn", data: { dismiss: "modal" } %>
+		</div>
+	</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

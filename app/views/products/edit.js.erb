@@ -1,0 +1,7 @@
+$(".box-form").html("<%= escape_javascript(render 'edit') %>")
+$(".box-form").slideDown(200);
+
+$('form').bind("ajax:beforeSend", function(evt, xhr, settings){
+  var $submitButton = $(this).find('input[type="submit"]');
+  	  $submitButton.val( "Submitting..." );
+});

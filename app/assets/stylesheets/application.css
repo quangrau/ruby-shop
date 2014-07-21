@@ -11,9 +11,29 @@
  * file per style scope.
  *
  *= require_tree .
- *= require_self
  *= require twitter/bootstrap
+ *= require_self
  */
+
+ @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+ .navbar-fixed-top {
+ 	border-top: 2px solid #25ae6c;
+ 	background: #463265;
+ 	color: #FFFFFF;
+ }
+
+ .navbar-default .navbar-brand {
+ 	color: #FFFFFF;
+ }
+
+ .navbar-default .navbar-nav > li > a {
+ 	color: #FFFFFF;
+ }
+
+ .navbar-default .navbar-nav > li > a:hover {
+ 	color: #25ae6c;
+ }
 
  #main {
  	padding-top: 100px;
@@ -314,7 +334,75 @@ Text Stats
 	}
 }
 
+/* style for table */
 .table tr.heading > th {
 	background: #EEE;
 }
 
+.action-row {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.box-form {
+	display: none;
+	padding: 20px;
+	margin-bottom: 20px;	
+	border: 1px solid #EEE;
+}
+
+.box-form h3 {
+	margin: 0 0 20px 0;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #999;
+}
+
+.form-inline .form-group, .navbar-form .form-group {
+	margin-right: 15px;
+}
+
+.form-inline label {
+	color: #666;
+	font-weight: 300;
+}
+
+.btn {
+	border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+}
+
+.btn-primary {
+	border-left: 5px solid #357EBD;
+}
+
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+	background-color: #FAEBF8 !important;
+}
+
+.page-title {
+	padding: 0px;
+	font-size: 30px;
+	letter-spacing: -1px;
+	display: block;
+	color: #666;
+	margin: 0px 0px 15px 0px;
+	font-weight: 300;
+	font-family: "Open Sans", sans-serif;
+}
+
+.page-title small {
+	font-size: 14px;
+	letter-spacing: 0px;
+	font-weight: 300;
+	color: #888;
+}
+
+.action {
+	font-size: 12px;
+	font-weight: 300;
+	font-family: "Open Sans", sans-serif;
+}
